@@ -48,7 +48,7 @@ npm run start
 ```
 
 You should now be able to view the generated site at
-[http://localhost:3000/](http://localhost:3000).
+[http://localhost:1313/](http://localhost:1313).
 
 ## Automatic Deployment
 
