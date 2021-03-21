@@ -1,0 +1,51 @@
+# Meta Data for SEO
+
+## Homepage
+title = "snmpcollector"
+titleSeparator = "-"
+titleAddition = ""
+description = ""
+
+
+## JSON-LD
+schemaType = "Organization"
+schemaLogo = "" #logo-doks.png
+schemaTwitter = ""
+schemaLinkedIn = ""
+schemaGitHub = "https://github.com/toni-moreno/snmpcollector"
+schemaSection = "blog"
+
+## Sitelinks Search Box
+siteLinksSearchBox = false
+
+## Chrome Browser
+themeColor = "#fff"
+
+# Images
+quality = 100
+bgColor = "#fff"
+landscapePhotoWidths = [900, 800, 700, 600, 500]
+portraitPhotoWidths = [800, 700, 600, 500]
+lqipWidth = "20x"
+
+# Footer
+footer = "Powered by <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
+
+# Alert
+alert = false
+alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
+
+# Edit Page
+docsRepo = "https://github.com/h-enk/doks"
+editPage = false
+
+[options]
+  lazySizes = true
+  clipBoard = false
+  instantPage = true
+  flexSearch = true
+  darkMode = true
+  bootStrapJs = false
+  breadCrumb = false
+  highLight = true
+  kaTex = false
