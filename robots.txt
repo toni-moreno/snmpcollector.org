@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: toni-moreno.github.io/snmpcollector.org/sitemap.xml
+Sitemap: /sitemap.xml
