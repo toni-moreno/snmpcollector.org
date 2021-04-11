@@ -1,4 +1,4 @@
-# # SnmpCollector Documentation
+# SnmpCollector Documentation
 
 This repository contains both the content and the static-site generator code for the
 snmpcollector documentation site.
