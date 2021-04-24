@@ -1,5 +1,5 @@
 ---
-title: Community
+title: Downloads
 menu:
   main:
     weight: 40
