@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/docs/overview/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/getting-started/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/components/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/runtime/runtime/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/data-management/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/troubleshooting/troubleshooting/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/examples/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/public-templates/public-device-dashboard-templates/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/news/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/releases/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/data-management/import/import/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/data-management/export/export/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/examples/cisco-qos/cisco-qos/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/examples/cisco-catalyst-switch/cisco-catalyst-switch/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/components/variable-catalog/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/components/influx-servers/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/components/oid-conditions/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/components/snmp-metrics/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/components/measurements/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/components/measurement-groups/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/components/measurement-filters/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/components/custom-filters/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/components/snmp-devices/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/2018/10/06/easy-documentation-with-docsy/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/2018/10/06/the-second-blog-post/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/2018/01/04/another-great-release/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/getting-started/example-page/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/parameter-reference/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/downloads/</loc>
+    <lastmod>2021-04-24T10:58:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/search/</loc>
+    <lastmod>2021-04-11T19:05:39+02:00</lastmod>
+  </url>
+  
+</urlset>

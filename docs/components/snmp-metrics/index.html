@@ -1,0 +1,1664 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.79.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>SNMP Metrics | SnmpCollector</title><meta property="og:title" content="SNMP Metrics" />
+<meta property="og:description" content="This component allows the user define core metrics to be collected from the device." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/components/snmp-metrics/" />
+<meta property="article:published_time" content="2021-03-16T08:43:34+01:00" />
+<meta property="article:modified_time" content="2021-04-11T19:05:39+02:00" /><meta property="og:site_name" content="SnmpCollector" />
+<meta itemprop="name" content="SNMP Metrics">
+<meta itemprop="description" content="This component allows the user define core metrics to be collected from the device.">
+<meta itemprop="datePublished" content="2021-03-16T08:43:34+01:00" />
+<meta itemprop="dateModified" content="2021-04-11T19:05:39+02:00" />
+<meta itemprop="wordCount" content="1756">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SNMP Metrics"/>
+<meta name="twitter:description" content="This component allows the user define core metrics to be collected from the device."/>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-00000000-0', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.58f92d676122405b5c14aa39b30f36e64a81f1a4a9d7a4f1c31a6260f8edef61.css" as="style">
+<link href="/scss/main.min.58f92d676122405b5c14aa39b30f36e64a81f1a4a9d7a4f1c31a6260f8edef61.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+
+
+<link rel="stylesheet" href="/css/shortcodes.css"/>
+
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zM197.0804 232.033c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zM197.0839 232.0372c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zM197.0839 232.0372c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zM197.0804 177.6188c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zM197.0839 177.623c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zM197.0839 177.623c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zM197.5309 286.4723c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zM197.5344 286.4765c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zM197.5344 286.4765c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zM197.0804 340.5784c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zM197.0839 340.5826c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zM197.0839 340.5826c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="text-uppercase font-weight-bold">SnmpCollector</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/about/" ><span>About</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/docs/" ><span class="active">Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/blog/" ><span>Blog</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/downloads/" ><span>Downloads</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+<input type="search" class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete="off">
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+  
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+<input type="search" class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete="off">
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    
+    
+    
+    
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+    <a href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
+    
+      
+      <ul class="pr-md-3 ul-1">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverview-li">
+    <a href="/docs/overview/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsoverview"><span class="">Overview</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgetting-started-li">
+    <a href="/docs/getting-started/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-started"><span class="">Getting Started</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedexample-page-li">
+    <a href="/docs/getting-started/example-page/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedexample-page"><span class="">Example Page</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docscomponents-li">
+    <a href="/docs/components/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docscomponents"><span class="">Components</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscomponentsvariable-catalog-li">
+    <a href="/docs/components/variable-catalog/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docscomponentsvariable-catalog"><span class="">Variable Catalog</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscomponentsinflux-servers-li">
+    <a href="/docs/components/influx-servers/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docscomponentsinflux-servers"><span class="">InfluxDB Servers</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscomponentsoid-conditions-li">
+    <a href="/docs/components/oid-conditions/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docscomponentsoid-conditions"><span class="">OID Conditions</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docscomponentssnmp-metrics-li">
+    <a href="/docs/components/snmp-metrics/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__page" id="m-docscomponentssnmp-metrics"><span class="td-sidebar-nav-active-item">SNMP Metrics</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscomponentsmeasurements-li">
+    <a href="/docs/components/measurements/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docscomponentsmeasurements"><span class="">Measurements</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscomponentsmeasurement-groups-li">
+    <a href="/docs/components/measurement-groups/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docscomponentsmeasurement-groups"><span class="">Measurement Groups</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscomponentsmeasurement-filters-li">
+    <a href="/docs/components/measurement-filters/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docscomponentsmeasurement-filters"><span class="">Measurement Filters</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscomponentscustom-filters-li">
+    <a href="/docs/components/custom-filters/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docscomponentscustom-filters"><span class="">Custom filters</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscomponentssnmp-devices-li">
+    <a href="/docs/components/snmp-devices/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docscomponentssnmp-devices"><span class="">SNMP Devices</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruntimeruntime-li">
+    <a href="/docs/runtime/runtime/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsruntimeruntime"><span class="">Runtime</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdata-management-li">
+    <a href="/docs/data-management/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsdata-management"><span class="">Data Management</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdata-managementimportimport-li">
+    <a href="/docs/data-management/import/import/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsdata-managementimportimport"><span class="">Import</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdata-managementexportexport-li">
+    <a href="/docs/data-management/export/export/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsdata-managementexportexport"><span class="">Export</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstroubleshootingtroubleshooting-li">
+    <a href="/docs/troubleshooting/troubleshooting/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docstroubleshootingtroubleshooting"><span class="">Troubleshooting</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexamples-li">
+    <a href="/docs/examples/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsexamples"><span class="">Examples</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexamplescisco-qoscisco-qos-li">
+    <a href="/docs/examples/cisco-qos/cisco-qos/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsexamplescisco-qoscisco-qos"><span class="">Retrieve metrics from Cisco QoS - CISCO-CLASS-BASED-QOS-MIB</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexamplescisco-catalyst-switchcisco-catalyst-switch-li">
+    <a href="/docs/examples/cisco-catalyst-switch/cisco-catalyst-switch/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsexamplescisco-catalyst-switchcisco-catalyst-switch"><span class="">Configuring Cisco Catalyst with basic metrics</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docspublic-templatespublic-device-dashboard-templates-li">
+    <a href="/docs/public-templates/public-device-dashboard-templates/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docspublic-templatespublic-device-dashboard-templates"><span class="">Public Device Dashboard templates</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsreference-li">
+    <a href="/docs/reference/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsreference"><span class="">Reference</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsreferenceparameter-reference-li">
+    <a href="/docs/reference/parameter-reference/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsreferenceparameter-reference"><span class="">Parameter Reference</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+    </ul>
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+  
+  
+  
+  
+  
+  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  
+    
+    
+      
+    
+    
+    
+    
+    
+    
+    
+
+    <a href="https://github.com/toni-moreno/snmpcollector/edit/master/content/en/docs/Components/snmp-metrics/index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+    <a href="https://github.com/toni-moreno/snmpcollector/new/master/content/en/docs/Components/snmp-metrics/index.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> Create child page</a>
+    <a href="https://github.com/toni-moreno/snmpcollector/issues/new?title=SNMP%20Metrics" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+    
+      
+      <a href="https://github.com/toni-moreno/snmpcollector.org/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+    
+
+  
+  
+    <a id="print" href="/docs/components/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
+  
+  </div>
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#view">View</a></li>
+    <li><a href="#addedit-snmp-metrics">Add/Edit SNMP Metrics</a>
+      <ul>
+        <li><a href="#configuration-parameters">Configuration Parameters</a></li>
+        <li><a href="#multi-edit-in-snmp-metrics">Multi edit in SNMP Metrics</a></li>
+      </ul>
+    </li>
+    <li><a href="#about-octetstringhex-string">About OCTETSTRING/Hex-String</a></li>
+    <li><a href="#about-bit-string-and-bit-string-check-metric-type">About BIT STRING and BIT STRING CHECK Metric Type</a></li>
+    <li><a href="#about-enum-metric-type">About ENUM Metric Type</a></li>
+    <li><a href="#about-multistringparser-metrics">About MULTISTRINGPARSER Metrics</a></li>
+    <li><a href="#about-stringeval-metrics">About STRINGEVAL Metrics</a>
+      <ul>
+        <li><a href="#usable-variables">Usable Variables</a></li>
+        <li><a href="#about-check">About Check</a></li>
+      </ul>
+    </li>
+    <li><a href="#examples">Examples</a>
+      <ul>
+        <li><a href="#acreating-new-stringeval-metric">A.Creating new StringEval Metric</a></li>
+        <li><a href="#b-creating-new-stringparser-metric">B. Creating new StringParser Metric</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/">Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/components/">Components</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="/docs/components/snmp-metrics/">SNMP Metrics</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>SNMP Metrics</h1>
+    <div class="lead">This component allows the user define core metrics to be collected from the device.</div>
+	       
+	<h2 id="view">View</h2>
+<p>Configured <strong>SNMP Metrics</strong> are shown as table. This will appear every time you navigate from menu.</p>
+
+
+
+
+<figure class="post-figure">
+  <a href="/docs/components/snmp-metrics/images/config_snmp_metrics_list.jpg">
+    
+    <img src="/docs/components/snmp-metrics/images/config_snmp_metrics_list_hub6549057966fefb9fed083126c7aa190_182033_1200x800_fit_q100_catmullrom.jpg"
+         width="1100" height="723"
+         alt="SNMP Metric List" />
+    
+  </a>
+  <figcaption>SNMP Metric List</figcaption>
+</figure>
+<h2 id="addedit-snmp-metrics">Add/Edit SNMP Metrics</h2>
+<ul>
+<li>
+<p><strong>Add</strong>: In the SNMP Metrics list click on new button <img src="/images/new_button.JPG" alt="New Button"></p>
+</li>
+<li>
+<p><strong>Edit</strong>: Click on SNMP Metric edit&rsquo;s button <img src="/images/edit_button.JPG" alt="Edit Button"></p>
+</li>
+</ul>
+<p>The Create/Modify form will show up:</p>
+
+
+
+
+<figure class="post-figure">
+  <a href="/docs/components/snmp-metrics/images/config_snmp_metrics_edit.jpg">
+    
+    <img src="/docs/components/snmp-metrics/images/config_snmp_metrics_edit_hu77b98c891206eb9264212256389120a5_57963_1200x800_fit_q100_catmullrom.jpg"
+         width="617" height="637"
+         alt="Create/Modify SNMP Metrics" />
+    
+  </a>
+  <figcaption>Create/Modify SNMP Metrics</figcaption>
+</figure>
+<h3 id="configuration-parameters">Configuration Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Type of settings</th>
+<th>Config Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core settings</td>
+<td>ID</td>
+<td>Text String that uniquely identify the metric recommended use the MIB Name, should be unique in the database</td>
+</tr>
+<tr>
+<td></td>
+<td>FieldName</td>
+<td>Set the &ldquo;field&rdquo; name inside a Influx measurement, could be the same of id or not, should be unique inside the measurement where the metric will be sent.</td>
+</tr>
+<tr>
+<td>Metric settings</td>
+<td>DataSrcType</td>
+<td>Origin data type could be one of these:<br/><ul><li>(SNMP SMI Type) INTEGER</li><li>(SNMP SMI Type) Integer32 </li><li>(SNMP SMI Type) Gauge32</li><li>(SNMP SMI Type) UInteger32</li><li>(SNMP SMI Type) Unsigned32</li><li>(SNMP SMI Type) Counter32 </li><li>(SNMP SMI Type) Counter64 </li><li>(SNMP SMI Type) TimeTicks</li><li>(SNMP SMI Type) OCTETSTRING</li><li>(SNMP SMI Type) IpAddress</li><li>(Cooked type) TIMETICKS [Compute TimeTicks to seconds]</li><li>(SNMP SMI Type) BIT STRING (needs a named-number enumeration in extradata) </li><li>(Cooked type) COUNTER32 [Compute increments for 32 bit counters]</li><li>(Cooked type) COUNTER64 [Compute increments for 64 bit counters]</li><li>(Cooked type) COUNTERXX [Compute increments only if it really increments &ndash; as NON_NEGATIVE_DERIVATIVE does&ndash;]</li><li>(Cooked type) HWADDR [ Translate Hardware Address (MAC) from STRING]</li><li>(Cooked type) STRINGPARSER [ Compute values from Regex ]</li><li>(Cooked type) STRINGEVAL [evaluate data from other metrics]</li><li>(Cooked type) CONDITIONEVAL [evaluate OID table with boolean conditions and get number of true values]</li><li>(Cooked type) BIT STRING CHECK [needs the number bit to check in extradata , returns 1 or 0]</li><li>(Cooked type) ENUM - [needs named-number enumeration on extradata]</li><li>(Cooked type) MULTI-STRINGPARSER  [generates multiple fields or tags from an snmp returned string and an Regular expression with multiple capturing groups]</li></ul></td>
+</tr>
+<tr>
+<td></td>
+<td>IsTag</td>
+<td>If true data will be sent as a Influxdb &ldquo;TAG&rdquo;. (default is false)</td>
+</tr>
+<tr>
+<td></td>
+<td>BaseOID</td>
+<td>Snmp OID for this metric ( could be the base OID when it belongs to a snmp indexed table), could not be set only if datasrctype is of type &ldquo;String Eval&rdquo;.</td>
+</tr>
+<tr>
+<td></td>
+<td>ExtraData</td>
+<td>data needed to special data types as String Eval(evaluated expression needed), String Parser(regex needed) or OctetString to add a trim function (0.8.2+)</td>
+</tr>
+<tr>
+<td></td>
+<td>GetRate</td>
+<td>Only useful on  COUNTER64/32/XX types , if true value sent will be the computed difference and after divided by the number of elapsed seconds between snmp calls</td>
+</tr>
+<tr>
+<td></td>
+<td>Conversion</td>
+<td>before 0.8.0 version all data was sent as FLOAT64 numbers, from new 0.8.0 version could select output format depending on the DataSrcType, usually FLOAT ( float64 ) , INTEGER (int64) , BOOLEAN or STRING. Not all conversions all available on all input datasources. Unsigned Integer conversion not supported yet.</td>
+</tr>
+<tr>
+<td>Metric autoscale</td>
+<td>Scale</td>
+<td>if set (as a floating point value) computed data will be scaled before sent.</td>
+</tr>
+<tr>
+<td></td>
+<td>Shift</td>
+<td>if set (as a floating point value) computed data will be shifted before sent.</td>
+</tr>
+<tr>
+<td>Extra settings</td>
+<td>Description</td>
+<td>any useful discretion to understand data gathered for this metric ( recommended place here units of the measurement).</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>Notes</strong></em>:
+The SnmpCollector Metric engine computes all its data and sent them as floating point values to the database, except for tags that will be sent as text strings</p>
+<h3 id="multi-edit-in-snmp-metrics">Multi edit in SNMP Metrics</h3>
+<p>Multi edit has 2 options: Remove and Change property</p>
+<ol>
+<li>
+<p>Remove: Allows to remove all the selected items</p>
+</li>
+<li>
+<p>Change property: Allows to change the selected property of all the selected items. The properties are the same defined in the configuration.</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Options/Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DataSrcType</td>
+<td>Selector</td>
+<td><li>Int,Int32,Gauge32,UInt32,Unsigned32,Counter32,Counter64</li><li>TimeTicks, OCTETSTRING, IpAddress</li><li>COUNTER32, COUNTER64, COUNTERXX</li><li>HWADDR, STRINGPARSER,STRINGEVAL, CONDITIONEVAL</li></ul></td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Input</td>
+<td>Any number</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>Input</td>
+<td>Any number</td>
+</tr>
+<tr>
+<td>IsTag</td>
+<td>Selector</td>
+<td>True / False</td>
+</tr>
+<tr>
+<td><img width=50/></td>
+<td><img width=50/></td>
+<td><img width=50/></td>
+</tr>
+</tbody>
+</table>
+<h2 id="about-octetstringhex-string">About OCTETSTRING/Hex-String</h2>
+<p>From 0.8.0 version, you could use OCTETSTRING as datasource Types for Integers codified as Hex-String, in this case you should enable conversion to INTEGER.</p>
+<blockquote>
+<p>If updated from release &lt; 0.8.0 to  release &gt;= 0.8.0 version you should do a manual upgrade of your database `update snmp_metric_cfg set Conversion=3 where datasrctype=&lsquo;OCTETSTRING&rsquo;; if not done any OCTETSTRING data won&rsquo;t be collected.</p>
+</blockquote>
+<p>From 0.8.2 version, it is possible to apply trim functions on octet-string metric based on <code>ExtraData</code></p>
+<p>Available options:</p>
+<ul>
+<li>trimright(&lsquo;xyz&rsquo;): removes trailing characters defined by &lsquo;xyz&rsquo;</li>
+<li>trimleft(&lsquo;xyz&rsquo;): removes leading characters defined by &lsquo;xyz&rsquo;</li>
+<li>trim(&lsquo;xyz&rsquo;): removes trailing and leading characters defined by &lsquo;xyz&rsquo;</li>
+<li>trimspace : remove all leading and trailing tabs, whitespaces, newlines and return carriage this is (\t \n\r)</li>
+</ul>
+<p>Example:</p>
+<pre><code>OID &gt; .1.2.3.4.5
+
+.1.2.3.4.5.1 = &quot;   Test string with blank spaces   &quot;
+
+ExtraData: trimspace
+
+Output:
+.1.2.3.4.5.1 = &quot;Test string with blank spaces&quot;
+</code></pre><h2 id="about-bit-string-and-bit-string-check-metric-type">About BIT STRING and BIT STRING CHECK Metric Type</h2>
+<p>From 0.7.2 version , there is the way to get data from BIT STRING OID&rsquo;s.  BITS is a pseudo data type that specifies a collection of labelled bits as explained here !(<a href="https://www.webnms.com/snmp/help/snmpapi/snmpv3/using_mibs_in_applns/bits_datatype.html">https://www.webnms.com/snmp/help/snmpapi/snmpv3/using_mibs_in_applns/bits_datatype.html</a>)</p>
+<p>If you want config a BIT STRING you should also provide the bit-&gt;label comma separated array, in the ExtraData Field.</p>
+<p>By example:<code>sunday(0), monday(1), tuesday(2), wednesday(3), thursday(4), friday(5), saturday(6)</code></p>
+<p>if data got on the snmpquery is this bitstring , The output will be an concatenated labeled array sent as and string to the influxDB.
+Examples:</p>
+<table>
+<thead>
+<tr>
+<th>Snmp query Out</th>
+<th>value sent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lsquo;011001B&rsquo;</td>
+<td>&ldquo;monday,tuesday,saturday&rdquo;</td>
+</tr>
+<tr>
+<td>&lsquo;100001B&rsquo;</td>
+<td>&ldquo;sunday,saturday&rdquo;</td>
+</tr>
+<tr>
+<td>&lsquo;010000B&rsquo;</td>
+<td>&ldquo;monday&rdquo;</td>
+</tr>
+<tr>
+<td>&lsquo;01B&rsquo;</td>
+<td>&ldquo;monday&rdquo;</td>
+</tr>
+</tbody>
+</table>
+<p>If we would like to know only if certain bit has been check  we can use the Cooked Type BIT STRING CHECK &ldquo;BITSCHECK&rdquo;. Suppose you can get with a BIT STRING the state of one device and the bit,label map is</p>
+<table>
+<thead>
+<tr>
+<th>bit number</th>
+<th>label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>up</td>
+</tr>
+<tr>
+<td>1</td>
+<td>down</td>
+</tr>
+<tr>
+<td>2</td>
+<td>restoring</td>
+</tr>
+<tr>
+<td>3</td>
+<td>failed</td>
+</tr>
+</tbody>
+</table>
+<p>You can check if the device is ok by only check that the byte &ldquo;0&rdquo; is set ( the device will be up) , in this case the metric will send 1  floating point number if the selected byte is set or 0 if not.</p>
+<h2 id="about-enum-metric-type">About ENUM Metric Type</h2>
+<p>From 0.7.7 version , there is the way to map enum
+values and send it to InfluxDB as STRING (as Tag or Field). The enum-named values can be defined on the ExtraData field with the following syntax:
+<code>&lt;CUSTOM_DESCRIPTION&gt;(&lt;ENUM&gt;)</code></p>
+<p>If a returned value by the OID query is not mapped on the extradata, the value will be sent directly as a STRING.</p>
+<p>By example, the following OID query <code>ifType OID - 1.3.6.1.2.1.2.2.1.3</code> would return the type of interfaces. The ENUM metric Type would allow the user to map those results and add custom text to clarify its meaning:</p>
+<p>With the following Metric:</p>
+<pre><code>SNMP possible results: 6,24,135
+
+Base OID : 1.3.6.1.2.1.2.2.1.3
+ExtraData: EthernetLike interfaces (6), SubInterfaces L2VLAN (135)
+</code></pre><p>Would generate the following output to InfluxDB:</p>
+<table>
+<thead>
+<tr>
+<th>Snmp query Out</th>
+<th>ExtraData</th>
+<th>value  sent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>EthernetLike interfaces (6)</td>
+<td>&ldquo;EthernetLike interfaces (6)&rdquo;</td>
+</tr>
+<tr>
+<td>24</td>
+<td>(non mapped)</td>
+<td>&ldquo;24&rdquo;</td>
+</tr>
+<tr>
+<td>135</td>
+<td>SubInterfaces L2VLAN (135)</td>
+<td>&ldquo;SubInterfaces L2VLAN (135)&rdquo;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="about-multistringparser-metrics">About MULTISTRINGPARSER Metrics</h2>
+<p>From 0.7.6 version , there is  a new metric type and the first capable to generate more than one field/tag with only one metric definition.
+Will parse data with regex with capturing groups and each capture group will be attached to a definition  ITEM, each definition ITEM will generate a Field or a Tag. We assume that the origin got data from devices are readable strings.</p>
+<p>Configuration will be placed in:</p>
+<ul>
+<li><strong>FieldName:</strong> Comma separated value of ITEM definitions</li>
+<li><strong>ExtraData:</strong> Regular expression with multiple capturing groups</li>
+</ul>
+<p>by example:</p>
+<ul>
+<li><strong>FieldName:</strong> <code>F|field_name_1|CONV1,F|field_name_2|CONV2,T|tag_name1|CONV3</code></li>
+<li><strong>ExtraData:</strong> <code>'([^;]*);([^;]*);([^;]*);' &lt;-regexp</code></li>
+</ul>
+<p>Is necessary configure as many ITEMS as capturing groups.</p>
+<p>Each ITEM  in  the FieldName needs for 3 parameters before to be sent.</p>
+<p><code>TYPE|NAME|CONVERSION</code></p>
+<table>
+<thead>
+<tr>
+<th>configuration</th>
+<th>what means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TYPE</td>
+<td>F = Field , T = Tag ( this parameter invalidates the use of isTag flag in the metric definition)</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>Field/Tag Name will be sent to the InfluxDB</td>
+</tr>
+<tr>
+<td>CONVERSION</td>
+<td>how should evaluate the returned string? possible values (STR,INT,FP,BL)</td>
+</tr>
+</tbody>
+</table>
+<p>Fields/Tag definitions will be evaluated as:</p>
+<table>
+<thead>
+<tr>
+<th>CONVERSORS</th>
+<th>Conversion type (from String)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STR</td>
+<td>to maintain as string ( no conversion will be done)</td>
+</tr>
+<tr>
+<td>INT</td>
+<td>to convert as and 64bits integer</td>
+</tr>
+<tr>
+<td>FP</td>
+<td>to convert as and 64 bits floating point</td>
+</tr>
+<tr>
+<td>BL</td>
+<td>to convert as a boolean</td>
+</tr>
+</tbody>
+</table>
+<h2 id="about-stringeval-metrics">About STRINGEVAL Metrics</h2>
+<p>The StringEval Metric type let us compute any value from an &ldquo;expression evaluation&rdquo; , the expression could be mathematical or logical. Available documentation  on what kind of evaluations could snmpcollector do could be read here <a href="https://github.com/Knetic/govaluate/blob/master/MANUAL.md">EXPRESSION TUTORIAL</a></p>
+<p><strong>Important defining <code>FieldNames</code> that contains characters like [0-9], [-], or something else, needs to be escaped using brackets on the formula. Example: [1m_ifHCInOctets] * [ifHighSpeed]</strong></p>
+<h3 id="usable-variables">Usable Variables</h3>
+<p>What variables could I use on  my expressions?, Here the variables</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FieldNames</td>
+<td>Any of the fieldNames placed on the same measurement</td>
+</tr>
+<tr>
+<td>NF</td>
+<td>especial variable that could be used to get the &ldquo;number of fields&rdquo; in the measurement (as in AWK)</td>
+</tr>
+<tr>
+<td>NR</td>
+<td>especial variable that could be used to get the &ldquo;number of rows&rdquo; in the measurement (after all filters has been applied), on scalar/value measurements, NR will be always 1 . On tabular/Indexed measurements NR will be the current number of rows (after filters applied)</td>
+</tr>
+<tr>
+<td>NFR(&gt;0.7.6)</td>
+<td>especial variable  that could be used to get the&quot;non filtered rows&quot;, that counts the &ldquo;number of rows&rdquo; as the below NR but before all filters has been applied.</td>
+</tr>
+<tr>
+<td>Catalog Vars( &gt; 0.7.5)</td>
+<td>Any of the defined variables in the catalog</td>
+</tr>
+</tbody>
+</table>
+<h3 id="about-check">About Check</h3>
+<p>When defining a new STRINGEVAL metric, the formula in extra data is stored on the configuration database but not evaluated yet since it needs to be placed into a measurement to check if expression its ok (validating all variables used in the expression are in the before table</p>
+<h2 id="examples">Examples</h2>
+<h3 id="acreating-new-stringeval-metric">A.Creating new StringEval Metric</h3>
+<p>Let&rsquo;s create a SNMP Metric that computes the <code>TotalOctets</code> on each port. The formula follows as:</p>
+<pre><code>TotalOctets = (InBytes + OutBytes)
+</code></pre><h4 id="a1-add-needed-metrics-to-get-our-new-string-eval-metric">A.1 Add needed metrics to get our new string eval metric:</h4>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>FieldName</th>
+<th>BaseOID</th>
+<th>DataSrcType</th>
+<th>ExtraData</th>
+<th>GetRate</th>
+<th>Scale</th>
+<th>Shift</th>
+<th>IsTag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ifHCInOctets</td>
+<td>InBytes</td>
+<td>.1.3.6.1.2.1.31.1.1.1.6</td>
+<td>COUNTER64</td>
+<td></td>
+<td>false</td>
+<td>0</td>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>ifHCOutOctets</td>
+<td>OutBytes</td>
+<td>.1.3.6.1.2.1.31.1.1.1.10</td>
+<td>COUNTER64</td>
+<td></td>
+<td>false</td>
+<td>0</td>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td><img width=25/></td>
+<td><img width=50/></td>
+<td><img width=50/></td>
+<td><img width=50/></td>
+<td><img width=50/></td>
+<td><img width=50/></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="a2-add-totaloctets-metric">A.2 Add <code>TotalOctets</code> metric:</h4>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>FieldName</th>
+<th>BaseOID</th>
+<th>DataSrcType</th>
+<th>ExtraData</th>
+<th>GetRate</th>
+<th>Scale</th>
+<th>Shift</th>
+<th>IsTag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TotalOctets</td>
+<td>TotalOctets</td>
+<td></td>
+<td>STRINGEVAL</td>
+<td>ifHCInOctets + ifHCOutOctets</td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h4 id="a3-result">A.3 Result</h4>
+<p>The SNMP Metric list must be like:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>FieldName</th>
+<th>BaseOID</th>
+<th>DataSrcType</th>
+<th>ExtraData</th>
+<th>GetRate</th>
+<th>Scale</th>
+<th>Shift</th>
+<th>IsTag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ifHCInOctets</td>
+<td>InBytes</td>
+<td>.1.3.6.1.2.1.31.1.1.1.6</td>
+<td>COUNTER64</td>
+<td></td>
+<td>false</td>
+<td>0</td>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>ifHCOutOctets</td>
+<td>OutBytes</td>
+<td>.1.3.6.1.2.1.31.1.1.1.10</td>
+<td>COUNTER64</td>
+<td></td>
+<td>false</td>
+<td>0</td>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>TotalOctets</td>
+<td>TotalOctets</td>
+<td></td>
+<td>STRINGEVAL</td>
+<td>InBytes + OutBytes</td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b-creating-new-stringparser-metric">B. Creating new StringParser Metric</h3>
+<p>Some OIDs results are full strings that contains on some part of its texts the value that we wants to capture.
+In this example we will work with an Infoblox device and the following OID that gives us Fan1 RPM: <code>.1.3.6.1.4.1.7779.3.1.1.2.1.10.1.3.28</code>, with an output as: <code>FAN 1: 8725 RPM</code></p>
+<h4 id="b1-define-the-regex-that-would-capture-the-group">B.1 Define the regex that would capture the group:</h4>
+<p>We need to capture the RPM speed, so we define the capture group as: <code>.*: *([0-9]*)* *RPM</code></p>
+<h4 id="b2-add-new-stringparser-metric">B.2 Add new StringParser metric</h4>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>FieldName</th>
+<th>BaseOID</th>
+<th>DataSrcType</th>
+<th>ExtraData</th>
+<th>GetRate</th>
+<th>Scale</th>
+<th>Shift</th>
+<th>IsTag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Infoblox_FanState1</td>
+<td>fanState1</td>
+<td></td>
+<td>STRINGPARSER</td>
+<td><code>.*: *([0-9]*)* *RPM</code></td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+
+	
+		<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+
+		<br />
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">Last modified April 11, 2021: <a  href="https://github.com/toni-moreno/snmpcollector/commit/6d8d0c939d79d791489aac092e49b3162cee52e6">migrating from doks to docsy, added new data (6d8d0c9)</a>
+</div>
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="User mailing list" aria-label="User mailing list">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://example.org/mail">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://example.org/twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Stack Overflow" aria-label="Stack Overflow">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://example.org/stack">
+      <i class="fab fa-stack-overflow"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/google/docsy">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Slack" aria-label="Slack">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://example.org/slack">
+      <i class="fab fa-slack"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Developer mailing list" aria-label="Developer mailing list">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://example.org/mail">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2021 The Docsy Authors All Rights Reserved</small>
+        <small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></small>
+	
+		<p class="mt-2"><a href="/about/">About Goldydocs</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.77c88615773c4e1870aff3d1d71a5502a3ff02a94dffd042609b7c6b30a4d882.js" integrity="sha256-d8iGFXc8Thhwr/PR1xpVAqP/AqlN/9BCYJt8azCk2II=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>
