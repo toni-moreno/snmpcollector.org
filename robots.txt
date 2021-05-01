@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: /snmpcollector.org/sitemap.xml
