@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://toni-moreno.github.io/snmpcollector.org"
 title = "SnmpCollector"
 
 enableRobotsTXT = true
