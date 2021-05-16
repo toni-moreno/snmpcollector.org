@@ -1,0 +1,50 @@
+---
+title: Downloads
+linkTitle: Downloads
+menu:
+  main:
+    weight: 30
+---
+<br><br>
+<div class="col-md-12 doc-content download">
+  <h1>Download</h1>
+
+  <p>
+    We provide precompiled binaries
+    for most officially maintained SnmpCollector components. If a component is
+    not listed here, check the respective repository on Github for further
+    instructions.
+  </p>
+
+<!-- https://gohugo.io/templates/shortcode-templates/#inline-shortcodes  -->
+<!-- TODO: Cascading Dropdown table https://stackoverflow.com/questions/29510296/how-do-i-implement-cascading-dropdown-using-golangs-templates-->
+{{< cmd.inline >}}
+{{range $i,$r := .Site.Data.Download.Releases}}
+<table class="table table-bordered downloads">
+    <thead>
+      <tr>
+        <td colspan="5">
+          <strong>{{$r.Version }} / {{$r.RelDate }} {{if eq $i 0}} (Latest) {{else}} {{end}} </strong>
+        </td>
+      </tr>
+      <tr class="first">
+        <th>File name</th>
+        <th>Arch</th>
+        <th>Size</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {{range $i,$a := $r.Assets}}
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="{{$a.Url}}">{{$a.Filename }} </a></td>
+        <td>{{$a.Arch}}</td>
+        <td>{{$a.Size}}</td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+  {{end}}
+  {{< /cmd.inline >}}
+  <table class="table table-bordered downloads">
+
