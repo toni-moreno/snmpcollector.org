@@ -20,9 +20,9 @@ Configured **SNMP Metrics** are shown as table. This will appear every time you 
 
 ## Add/Edit SNMP Metrics
 
-- **Add**: In the SNMP Metrics list click on new button ![New Button](/images/new_button.JPG)
+- **Add**: In the SNMP Metrics list click on new button ![New Button](images/new_button.JPG)
 
-- **Edit**: Click on SNMP Metric edit's button ![Edit Button](/images/edit_button.JPG)
+- **Edit**: Click on SNMP Metric edit's button ![Edit Button](images/edit_button.JPG)
 
 The Create/Modify form will show up:
 

@@ -16,18 +16,18 @@ toc: true
 
 Configured **Measurement Groups** are shown as table. This will appear every time you navigate from menu.
 
-![Measurement Groups list](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/MeasGroups/config_meas_groups_list.JPG)
+![Measurement Groups list](images/config_meas_groups_list.JPG)
 
 
 ## Add/Edit InfluxDB output databases
 
-- **Add**: In the InfluxDB Servers list click on new button ![New Button](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Tables/new_button.JPG)
+- **Add**: In the InfluxDB Servers list click on new button ![New Button](images/new_button.JPG)
 
-- **Edit**: Click on InfluxDB edit's button ![Edit Button](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Tables/edit_button.JPG)
+- **Edit**: Click on InfluxDB edit's button ![Edit Button](images/edit_button.JPG)
 
 The Create/Modify form will show up:
 
-![New button](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/MeasGroups/config_meas_groups_edit.JPG)
+![New button](images/config_meas_groups_edit.JPG)
 
 ### Configuration Parameters
 

@@ -20,19 +20,20 @@ The core component: SNMP Devices. The user will define Devices to poll data from
 
 Configured **SNMP Devices** are shown as table. This will appear every time you navigate from menu.
 
-![SNMP Devices list](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/SnmpDevices/config_snmp_devices_list.JPG)
-
+{{< postimage "images/config_snmp_devices_list.JPG" "" >}}
 
 ## Add/Edit SNMP Devices
 
-- **Add**: In the SNMP Devices list click on new button ![New Button](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Tables/new_button.JPG)
+- **Add**: In the SNMP Devices list click on new button ![New Button](images/new_button.JPG)
 
-- **Edit**: Click on SNMP Devices edit's button ![Edit Button](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Tables/edit_button.JPG)
+- **Edit**: Click on SNMP Devices edit's button ![Edit Button](images/edit_button.JPG)
 
 The Create/Modify form will show up:
 
-![Edit Device 1](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/SnmpDevices/config_snmp_devices_edit_1.jpg)
+{{< postimage "images/config_snmp_devices_edit_1.jpg" "" >}}
 <br/>
+
+
 
 ### Configuration Parameters
 
@@ -77,17 +78,18 @@ When editing or adding a SNMPDevice there is the option to send a query and chec
 
 To access on the Test Connection Modal, click on `Test Connection`
 
-![Test Connection Modal](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/TestConnectionModal/config_test_connection_list.JPG)
+{{< postimage "images/config_test_connection_list.JPG" "" >}}
 
 The user can select the `OID Source`:
 
-![OID Source](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/TestConnectionModal/config_test_connection_components.JPG)
+{{< postimage "images/config_test_connection_components.JPG" "" >}}
+
 
 The OID related on selected component will load and the user will be able to send query to see those results:
 
-![OID Source](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/TestConnectionModal/config_test_connection_oid.JPG)
+{{< postimage "images/config_test_connection_oid.JPG" "" >}}
 
-![OID Source](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/TestConnectionModal/config_test_connection_result.JPG)
+{{< postimage "images/config_test_connection_result.JPG" "" >}}
 
 
 ### Filter Connection

@@ -16,17 +16,17 @@ toc: true
 
 Configured Measurement Filters are shown as table. This will appear every time you navigate from menu.
 
-![SNMP Metric List](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/MeasurementFilters/config_meas_filters_list.JPG)
+![SNMP Metric List](images/config_meas_filters_list.JPG)
 
 ## Add/Edit Measurement Filters
 
-- **Add**: In the Measurement Filters list click on new button ![New Button](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Tables/new_button.JPG)
+- **Add**: In the Measurement Filters list click on new button ![New Button](images/new_button.JPG)
 
-- **Edit**: Click on Measurement Filter edit's button ![Edit Button](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Tables/edit_button.JPG)
+- **Edit**: Click on Measurement Filter edit's button ![Edit Button](images/edit_button.JPG)
 
 The Create/Modify form will show up:
 
-![Create/Modify SNMP Metrics](https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/MeasurementFilters/config_meas_filters_edit.JPG)
+![Create/Modify SNMP Metrics](images/config_meas_filters_edit.JPG)
 
 ### Configuration Parameters
 

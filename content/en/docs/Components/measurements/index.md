@@ -17,8 +17,8 @@ toc: true
 <!-- https://github.com/toni-moreno/snmpcollector/blob/ -->
 
 
-[New Button]: /images/new_button.JPG "New Button"
-[Edit Button]: /images/edit_button.JPG "Edit Button"
+[New Button]: images/new_button.JPG "New Button"
+[Edit Button]: images/edit_button.JPG "Edit Button"
 
 [add_button]: images/add_button.jpg "Add button"
 [remove_button]: images/remove_button.jpg "Remove button"
