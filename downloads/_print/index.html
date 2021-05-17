@@ -46,8 +46,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/snmpcollector.org/scss/main.min.58f92d676122405b5c14aa39b30f36e64a81f1a4a9d7a4f1c31a6260f8edef61.css" as="style">
-<link href="/snmpcollector.org/scss/main.min.58f92d676122405b5c14aa39b30f36e64a81f1a4a9d7a4f1c31a6260f8edef61.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/snmpcollector.org/scss/main.min.dc02de46d72d920d6e138b26f521fe130fed76e2d7d4255dc58caad42ea30557.css" as="style">
+<link href="/snmpcollector.org/scss/main.min.dc02de46d72d920d6e138b26f521fe130fed76e2d7d4255dc58caad42ea30557.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -81,31 +81,7 @@ if (!doNotTrack) {
 				
 				
 				
-				<a class="nav-link" href="/snmpcollector.org/about/" ><span>About</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
 				<a class="nav-link" href="/snmpcollector.org/docs/" ><span>Documentation</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link" href="/snmpcollector.org/blog/" ><span>Blog</span></a>
 			</li>
 			
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
@@ -135,7 +111,184 @@ if (!doNotTrack) {
       <main role="main" class="td-main">
         
 
-<!--add blocks of content here to add more sections to the community page -->
+<br><br>
+<div class="col-md-12 doc-content download">
+  <h1>Download</h1>
+
+  <p>
+    We provide precompiled binaries
+    for most officially maintained SnmpCollector components. If a component is
+    not listed here, check the respective repository on Github for further
+    instructions.
+  </p>
+
+<!-- https://gohugo.io/templates/shortcode-templates/#inline-shortcodes  -->
+<!-- TODO: Cascading Dropdown table https://stackoverflow.com/questions/29510296/how-do-i-implement-cascading-dropdown-using-golangs-templates-->
+
+
+<table class="table table-bordered downloads">
+    <thead>
+      <tr>
+        <td colspan="5">
+          <strong>0.10.0 / 2021-03-06  (Latest)  </strong>
+        </td>
+      </tr>
+      <tr class="first">
+        <th>File name</th>
+        <th>Arch</th>
+        <th>Size</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/releases/download/0.10.0/snmpcollector-0.10.0-1.x86_64.rpm">snmpcollector-0.10.0-1.x86_64.rpm </a></td>
+        <td>rpm</td>
+        <td>6.91 MB</td>
+      </tr>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/releases/download/0.10.0/snmpcollector-0.10.0-61eac23_linux_amd64.tar.gz">snmpcollector-0.10.0-61eac23_linux_amd64.tar.gz </a></td>
+        <td>amd64</td>
+        <td>7.61 MB</td>
+      </tr>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/releases/download/0.10.0/snmpcollector_0.10.0_amd64.deb">snmpcollector_0.10.0_amd64.deb </a></td>
+        <td>deb</td>
+        <td>6.96 MB</td>
+      </tr>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.10.0.zip">Source code (zip) </a></td>
+        <td>-</td>
+        <td>351.2 kB</td>
+      </tr>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.10.0.zip">Source code (tar gz) </a></td>
+        <td>-</td>
+        <td>248.2 kB</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+<table class="table table-bordered downloads">
+    <thead>
+      <tr>
+        <td colspan="5">
+          <strong>0.10 / 2021-03-06   </strong>
+        </td>
+      </tr>
+      <tr class="first">
+        <th>File name</th>
+        <th>Arch</th>
+        <th>Size</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.10.zip">Source code (zip) </a></td>
+        <td>-</td>
+        <td>350.1 kB</td>
+      </tr>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.10.tar.gz">Source code (tar gz) </a></td>
+        <td>-</td>
+        <td>248.2 kB</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+<table class="table table-bordered downloads">
+    <thead>
+      <tr>
+        <td colspan="5">
+          <strong>0.9.1 / 2021-02-17   </strong>
+        </td>
+      </tr>
+      <tr class="first">
+        <th>File name</th>
+        <th>Arch</th>
+        <th>Size</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.9.1.zip">Source code (zip) </a></td>
+        <td>-</td>
+        <td>355.4 kB</td>
+      </tr>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.9.1.tar.gz">Source code (tar gz) </a></td>
+        <td>-</td>
+        <td>252.7 kB</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+<table class="table table-bordered downloads">
+    <thead>
+      <tr>
+        <td colspan="5">
+          <strong>0.9.0 / 2021-01-04   </strong>
+        </td>
+      </tr>
+      <tr class="first">
+        <th>File name</th>
+        <th>Arch</th>
+        <th>Size</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/releases/download/0.9.0/snmpcollector-0.9.0-023b090_linux_amd64.tar.gz">snmpcollector-0.9.0-023b090_linux_amd64.tar.gz </a></td>
+        <td>amd64</td>
+        <td>8.32 MB</td>
+      </tr>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/releases/download/0.9.0/snmpcollector-0.9.0-1.x86_64.rpm">snmpcollector-0.9.0-1.x86_64.rpm </a></td>
+        <td>rpm</td>
+        <td>7.61 MB</td>
+      </tr>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/releases/download/0.9.0/snmpcollector_0.9.0_amd64.deb">snmpcollector_0.9.0_amd64.deb </a></td>
+        <td>amd64</td>
+        <td>7.67 MB</td>
+      </tr>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.9.0.zip">Source code (zip) </a></td>
+        <td>-</td>
+        <td>355.1 kB</td>
+      </tr>
+      
+      <tr data-os="<%= binary.os %>" data-arch="<%= binary.arch %>">
+        <td class="filename"><a class="download" href="https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.9.0.tar.gz">Source code (tar gz) </a></td>
+        <td>-</td>
+        <td>248.2 kB</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+  
+  <table class="table table-bordered downloads">
+
 
 
 
@@ -148,30 +301,6 @@ if (!doNotTrack) {
         
         
         
-<ul class="list-inline mb-0">
-  
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="User mailing list" aria-label="User mailing list">
-    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://example.org/mail">
-      <i class="fa fa-envelope"></i>
-    </a>
-  </li>
-  
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
-    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://example.org/twitter">
-      <i class="fab fa-twitter"></i>
-    </a>
-  </li>
-  
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Stack Overflow" aria-label="Stack Overflow">
-    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://example.org/stack">
-      <i class="fab fa-stack-overflow"></i>
-    </a>
-  </li>
-  
-</ul>
-
-        
-        
       </div>
       <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
         
@@ -180,20 +309,8 @@ if (!doNotTrack) {
 <ul class="list-inline mb-0">
   
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
-    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/google/docsy">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/toni-moreno/snmpcollector">
       <i class="fab fa-github"></i>
-    </a>
-  </li>
-  
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Slack" aria-label="Slack">
-    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://example.org/slack">
-      <i class="fab fa-slack"></i>
-    </a>
-  </li>
-  
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Developer mailing list" aria-label="Developer mailing list">
-    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://example.org/mail">
-      <i class="fa fa-envelope"></i>
     </a>
   </li>
   
@@ -206,7 +323,7 @@ if (!doNotTrack) {
         <small class="text-white">&copy; 2021 The Docsy Authors All Rights Reserved</small>
         <small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></small>
 	
-		<p class="mt-2"><a href="/snmpcollector.org/about/">About Goldydocs</a></p>
+		
 	
       </div>
     </div>
