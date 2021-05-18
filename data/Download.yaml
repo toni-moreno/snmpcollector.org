@@ -3,6 +3,11 @@ Releases:
   RelDate: "2021-03-06"
   Assets:
     -
+      Filename: "docker pull tonimoreno/snmpcollector:0.10"
+      Arch: "docker"
+      Url: "https://hub.docker.com/r/tonimoreno/snmpcollector/tags?page=1&ordering=last_updated"
+      Size: "11.58 MB"
+    -
       Filename: "snmpcollector-0.10.0-1.x86_64.rpm"
       Arch: "rpm"
       Url: "https://github.com/toni-moreno/snmpcollector/releases/download/0.10.0/snmpcollector-0.10.0-1.x86_64.rpm"
@@ -28,34 +33,7 @@ Releases:
       Url: "https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.10.0.zip"
       Size: "248.2 kB"
 
-- Version: "0.10"
-  RelDate: "2021-03-06"
-  Assets:
-    -
-      Filename: "Source code (zip)"
-      Arch: "-"
-      Url: "https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.10.zip"
-      Size: "350.1 kB"
-    -
-      Filename: "Source code (tar gz)"
-      Arch: "-"
-      Url: "https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.10.tar.gz"
-      Size: "248.2 kB"
 
-- Version: "0.9.1"
-  RelDate: "2021-02-17"
-  Assets:
-    -
-      Filename: "Source code (zip)"
-      Arch: "-"
-      Url: "https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.9.1.zip"
-      Size: "355.4 kB"
-    -
-      Filename: "Source code (tar gz)"
-      Arch: "-"
-      Url: "https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.9.1.tar.gz"
-      Size: "252.7 kB"
- 
 
 - Version: "0.9.0"
   RelDate: "2021-01-04"
@@ -86,4 +64,35 @@ Releases:
       Arch: "-"
       Url: "https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.9.0.tar.gz"
       Size: "248.2 kB" 
+
+- Version: "0.8.1"
+  RelDate: "2020-10-06"
+  Assets:
+    -
+      Filename: "snmpcollector-0.8.1-f56ef9f_linux_amd64.tar.gz"
+      Arch: "amd64"
+      Url: "https://github.com/toni-moreno/snmpcollector/releases/download/0.8.1/snmpcollector-0.8.1-f56ef9f_linux_amd64.tar.gz"
+      Size: "7.61 MB"
+      
+    -
+      Filename: "snmpcollector-0.8.1-1.x86_64.rpm"
+      Arch: "rpm"
+      Url: "https://github.com/toni-moreno/snmpcollector/releases/download/0.8.1/snmpcollector-0.8.1-1.x86_64.rpm"
+      Size: "7.55 MB"
+    -
+      Filename: "snmpcollector_0.8.1_amd64.deb"
+      Arch: "amd64"
+      Url: "https://github.com/toni-moreno/snmpcollector/releases/download/0.8.1/snmpcollector_0.8.1_amd64.deb"
+      Size: "7.67 MB"
+    -
+      Filename: "Source code (zip)"
+      Arch: "-"
+      Url: "https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.8.1.zip"
+      Size: "355.1 kB"
+    -
+      Filename: "Source code (tar gz)"
+      Arch: "-"
+      Url: "https://github.com/toni-moreno/snmpcollector/archive/refs/tags/0.8.1.tar.gz"
+      Size: "248.2 kB" 
+
 
