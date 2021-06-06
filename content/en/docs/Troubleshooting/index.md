@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting"
-description: ""
+description: "Various guides to troubleshoot your SnmpCollector deployment"
 lead: ""
 date: 2021-03-16T08:43:34+01:00
 lastmod: 2021-03-16T08:43:34+01:00
@@ -8,7 +8,7 @@ draft: false
 menu:
 docs:
 parent: "Data Management"
-weight: 5
+weight: 6
 toc: true
 ---
 

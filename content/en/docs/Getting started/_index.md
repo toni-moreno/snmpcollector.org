@@ -3,6 +3,7 @@ title: "Getting Started"
 linkTitle: "Getting Started"
 weight: 2
 description: >
+  How to get started using SnmpCollector
 ---
 
 SnmpCollector is a full featured Generic SNMP data collector with Web Administration Interface Open Source tool which has as main goal simplify  the configuration for getting data from any  device which snmp protocol support and send resulting data to an influxdb backend.

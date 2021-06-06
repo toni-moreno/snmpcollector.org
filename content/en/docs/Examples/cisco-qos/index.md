@@ -14,25 +14,25 @@ toc: true
 
 
 <!-- Images Rel -->
-[mi-indexed]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/multiindex_indexed.jpg "(snmp Table) Indexed with direct TAG"
-[mi-indexed_it]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/multiindex_indexed_it.jpg "(snmp Table) Indexed with indirect TAG"
-[mi-indexed_mit]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/multiindex_indexed_mit.jpg "(snmp Table) Indexed with multiple indirect TAG"
+[mi-indexed]: /webUI/Examples/QoS/multiindex_indexed.jpg "(snmp Table) Indexed with direct TAG"
+[mi-indexed_it]: /webUI/Examples/QoS/multiindex_indexed_it.jpg "(snmp Table) Indexed with indirect TAG"
+[mi-indexed_mit]: /webUI/Examples/QoS/multiindex_indexed_mit.jpg "(snmp Table) Indexed with multiple indirect TAG"
 
 <!-- CM -->
 [cbqosifindex_meas]:  https://github.com/toni-moreno/snmpcollector/blob//gh-pages/images/webUI/Examples/QoS/cbqosifindex_meas.jpg "example of index dfefinition of cbqosifIndex"
-[cbqospolicydirection_meas]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqospolicydirection_meas.jpg "example of definition of cbqospolicydirection"
-[cbqoscmname_meas]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqoscmname_meas.jpg "example of definition of cbQosCMName index"
-[cbqospolicymapname_meas]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqospolicymapname_meas.jpg "example of definition of cbQosPolicyMapName"
-[cbqospolicymapname_meas_index]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqospolicymapname_meas_index.jpg "example of definition of cbQosPolicyMapName multi TagOID"
-[cbqoscminfo_meas]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqoscminfo_meas.jpg "example of definition of cbQosCMInfo"
-[runtime_qoscm]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/runtime_qoscm.jpg "Example of QoS CMStats"
+[cbqospolicydirection_meas]: /webUI/Examples/QoS/cbqospolicydirection_meas.jpg "example of definition of cbqospolicydirection"
+[cbqoscmname_meas]: /webUI/Examples/QoS/cbqoscmname_meas.jpg "example of definition of cbQosCMName index"
+[cbqospolicymapname_meas]: /webUI/Examples/QoS/cbqospolicymapname_meas.jpg "example of definition of cbQosPolicyMapName"
+[cbqospolicymapname_meas_index]: /webUI/Examples/QoS/cbqospolicymapname_meas_index.jpg "example of definition of cbQosPolicyMapName multi TagOID"
+[cbqoscminfo_meas]: /webUI/Examples/QoS/cbqoscminfo_meas.jpg "example of definition of cbQosCMInfo"
+[runtime_qoscm]: /webUI/Examples/QoS/runtime_qoscm.jpg "Example of QoS CMStats"
 
 <!--TS -->
-[cbqoscmname_ts_meas]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqoscmname_ts_meas.jpg "Example of CMName from TSStats"
-[cbqoscmname_meas_index]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqoscmname_meas_index.jpg "example of definition of cbqosCMName multi TagOID"
-[cbqospolicyname_ts_meas]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqospolicyname_ts_meas.jpg "Example of PolicyMapName from TSStats"
-[cbqoscmname_meas_index_ts]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqoscmname_meas_index_ts.jpg "example of definition of cbqosPolicyMap multi TagOID"
-[runtime_qosts]: https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/runtime_qosts.jpg "Example of QoS TSStats"
+[cbqoscmname_ts_meas]: /webUI/Examples/QoS/cbqoscmname_ts_meas.jpg "Example of CMName from TSStats"
+[cbqoscmname_meas_index]: /webUI/Examples/QoS/cbqoscmname_meas_index.jpg "example of definition of cbqosCMName multi TagOID"
+[cbqospolicyname_ts_meas]: /webUI/Examples/QoS/cbqospolicyname_ts_meas.jpg "Example of PolicyMapName from TSStats"
+[cbqoscmname_meas_index_ts]: /webUI/Examples/QoS/cbqoscmname_meas_index_ts.jpg "example of definition of cbqosPolicyMap multi TagOID"
+[runtime_qosts]: /webUI/Examples/QoS/runtime_qosts.jpg "Example of QoS TSStats"
 <!-- END -->
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Components"
 linkTitle: "Components"
-weight: 3
+weight: 4
 description: >
-  Low level reference docs for your project.
+  Logical components that make up SnmpCollector 
 ---
