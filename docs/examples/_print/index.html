@@ -19,15 +19,18 @@
 <link rel="icon" type="image/png" href="/snmpcollector.org/favicons/android-192x192.png" sizes="192x192">
 
 <title>Examples | SnmpCollector</title><meta property="og:title" content="Examples" />
-<meta property="og:description" content="SnmpCollector Documentation Site" />
+<meta property="og:description" content="Example of gahtering data from Cisco Catalyst and QOS devices
+" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://toni-moreno.github.io/snmpcollector.org/docs/examples/" />
 <meta property="og:site_name" content="SnmpCollector" />
 <meta itemprop="name" content="Examples">
-<meta itemprop="description" content="SnmpCollector Documentation Site">
+<meta itemprop="description" content="Example of gahtering data from Cisco Catalyst and QOS devices
+">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Examples"/>
-<meta name="twitter:description" content="SnmpCollector Documentation Site"/>
+<meta name="twitter:description" content="Example of gahtering data from Cisco Catalyst and QOS devices
+"/>
 
 
 <script type="application/javascript">
@@ -133,7 +136,7 @@ This the multi-page printable view of this section.
 
 
 <h1 class="title">Examples</h1>
-
+<div class="lead">Example of gahtering data from Cisco Catalyst and QOS devices</div>
 
 
 
@@ -149,7 +152,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-0eecdc864a95f5c7c01cd168dadaaf7a">Retrieve metrics from Cisco QoS - CISCO-CLASS-BASED-QOS-MIB</a></li>
+<li>1: <a href="#pg-a3577a79baebac02a3c7f7311bf296c6">Retrieve metrics from Cisco QoS - CISCO-CLASS-BASED-QOS-MIB</a></li>
 
 
     
@@ -157,7 +160,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-f36a5fdcc98c0bf39b8b1adf455af28d">Configuring Cisco Catalyst with basic metrics</a></li>
+<li>2: <a href="#pg-74d9fb7b89bcdfe68abd7a653ae0e6c6">Configuring Cisco Catalyst with basic metrics</a></li>
 
 
     
@@ -188,7 +191,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-0eecdc864a95f5c7c01cd168dadaaf7a">1 - Retrieve metrics from Cisco QoS - CISCO-CLASS-BASED-QOS-MIB</h1>
+	<h1 id="pg-a3577a79baebac02a3c7f7311bf296c6">1 - Retrieve metrics from Cisco QoS - CISCO-CLASS-BASED-QOS-MIB</h1>
     
 	<!-- Images Rel -->
 <!-- CM -->
@@ -536,7 +539,7 @@ According to documentation, we need to poll the following OIDs to retrieve those
 
 1.3.6.1.2.1.31.1.1.1.1<span style="color:#ce5c00;font-weight:bold">[</span>.1<span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;Te1/0/3&#34;</span>
 </code></pre></div><p>As we have an indirect tag, we will create an index with <strong>&quot;(snmp Table) Indexed with indirect Tag&quot;</strong></p>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/multiindex_indexed_it.jpg" alt="mi-indexed_it" title="(snmp Table) Indexed with indirect TAG"></p>
+<p><img src="/webUI/Examples/QoS/multiindex_indexed_it.jpg" alt="mi-indexed_it" title="(snmp Table) Indexed with indirect TAG"></p>
 <p>And will fill with the following fields:</p>
 <table>
 <thead>
@@ -618,7 +621,7 @@ Note that the index keeps only in 1 dimension and it is related with the <code>S
 .1.3.6.1.4.1.9.9.166.1.1.1.1.3<span style="color:#ce5c00;font-weight:bold">[</span>.1043<span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> INTEGER: output<span style="color:#ce5c00;font-weight:bold">(</span>2<span style="color:#ce5c00;font-weight:bold">)</span>
 .1.3.6.1.4.1.9.9.166.1.1.1.1.3<span style="color:#ce5c00;font-weight:bold">[</span>.1099<span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> INTEGER: input<span style="color:#ce5c00;font-weight:bold">(</span>1<span style="color:#ce5c00;font-weight:bold">)</span>
 </code></pre></div><p>In this case, we don&rsquo;t need to do an indirection, as it is giving directly the value of the tag, so we can use a <strong>&quot;(snmp Table) Index with direct TAG&quot;</strong></p>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/multiindex_indexed.jpg" alt="mi-indexed" title="(snmp Table) Indexed with direct TAG"></p>
+<p><img src="/webUI/Examples/QoS/multiindex_indexed.jpg" alt="mi-indexed" title="(snmp Table) Indexed with direct TAG"></p>
 <p>As we can see, the indexes are also [.1043] and [.1099] - <code>Service Policy Index</code> and they are shared with the <code>IDX{0}</code>, the <code>cbQosIfIndex</code> index</p>
 <p>We will fill the index with the following field/values:</p>
 <table>
@@ -667,7 +670,7 @@ Note that the index keeps only in 1 dimension and it is related with the <code>S
 </p>
 <p>(*) Dependency:</p>
 <p>We set up a dependency with the IDX{0}, as they shares the same Index in order to heridate ifIndex Tags. We will use a SKIP strategy</p>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqospolicydirection_meas.jpg" alt="cbqospolicydirection_meas" title="example of definition of cbqospolicydirection"></p>
+<p><img src="/webUI/Examples/QoS/cbqospolicydirection_meas.jpg" alt="cbqospolicydirection_meas" title="example of definition of cbqospolicydirection"></p>
 <p>At this point, we will have that the <code>IDX{1}</code> will be:</p>
 <pre><code>&gt; Index: IDX{0} | cbQosIfIndex
 
@@ -715,7 +718,7 @@ Note that the index keeps only in 1 dimension and it is related with the <code>S
 ...
 </code></pre><p>As we have said, the first index references to the <code>Service Policy Index</code> and the second index refers directly to the <code>Object Index</code>.</p>
 <p>As we have an indirect tag, we will create an index with <strong>&quot;(snmp Table) Indexed with indirect Tag&quot;</strong></p>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/multiindex_indexed_it.jpg" alt="mi-indexed_it" title="(snmp Table) Indexed with indirect TAG"></p>
+<p><img src="/webUI/Examples/QoS/multiindex_indexed_it.jpg" alt="mi-indexed_it" title="(snmp Table) Indexed with indirect TAG"></p>
 <p>We will fill with the following field/values:</p>
 <table>
 <thead>
@@ -769,7 +772,7 @@ Note that the index keeps only in 1 dimension and it is related with the <code>S
 <p>(*) Dependency</p>
 <p>The dependency in ths case is based on <code>IDX{1}</code> - cbQosPolicyDirection that already have ifName tag.
 In this case, the metrics have indexes with dimension 2, so we need to change the check condition based only on the first index, the <code>Service Policy Index</code>, using the statement <code>DOT[0:0]</code></p>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqoscmname_meas.jpg" alt="cbqoscmname_meas" title="example of definition of cbQosCMName index"></p>
+<p><img src="/webUI/Examples/QoS/cbqoscmname_meas.jpg" alt="cbqoscmname_meas" title="example of definition of cbQosCMName index"></p>
 <p>At this point, we will have that the <code>IDX{1}</code> will be:</p>
 <pre><code>
 &gt; IDX{1}:
@@ -838,7 +841,7 @@ The name of the policy can be retrieved from the following OID:</p>
 <pre><code>[.1043][.1043] - PolicyMap
 [.1099][.1099] - PolicyMap
 </code></pre><p>With the information above we need to define a new measurement, but in this case, we need to do at least 2 indirects and, in the middle modify the check condition with another indexes, so we define the measurement as <strong>&quot;(snmp Table) Indexed with multiple indirect TAG&quot;</strong></p>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/multiindex_indexed_mit.jpg" alt="mi-indexed_mit" title="(snmp Table) Indexed with multiple indirect TAG"></p>
+<p><img src="/webUI/Examples/QoS/multiindex_indexed_mit.jpg" alt="mi-indexed_mit" title="(snmp Table) Indexed with multiple indirect TAG"></p>
 <p>We fill the index with the following field/values:</p>
 <table>
 <thead>
@@ -889,7 +892,7 @@ The name of the policy can be retrieved from the following OID:</p>
 <p align="center">
    :information_source: Index 3 - cbQosPolicyMapName
 </p>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqospolicymapname_meas.jpg" alt="cbqospolicymapname_meas" title="example of definition of cbQosPolicyMapName"></p>
+<p><img src="/webUI/Examples/QoS/cbqospolicymapname_meas.jpg" alt="cbqospolicymapname_meas" title="example of definition of cbQosPolicyMapName"></p>
 <p><strong>(*) Multi Tag OID</strong></p>
 <p>We will define 2 TagOID:</p>
 <p>TagOID 0:</p>
@@ -938,7 +941,7 @@ The name of the policy can be retrieved from the following OID:</p>
 </tr>
 </tbody>
 </table>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqospolicymapname_meas_index.jpg" alt="cbqospolicymapname_meas_index" title="example of definition of cbQosPolicyMapName multi TagOID"></p>
+<p><img src="/webUI/Examples/QoS/cbqospolicymapname_meas_index.jpg" alt="cbqospolicymapname_meas_index" title="example of definition of cbQosPolicyMapName multi TagOID"></p>
 <p><strong>(**) Dependency</strong></p>
 <p>In this case, we need to retrieve both indexes from the IDX{2}, the complete CMIndex <code>Service Policy Index</code>.<code>Object Index</code></p>
 <p>The logic is:</p>
@@ -1000,7 +1003,7 @@ A simple walk over <code>cbQosCMInfo</code>:</p>
 .1.3.6.1.4.1.9.9.166.1.7.1.1.3[.1029] = INTEGER: matchAll(2)
 .1.3.6.1.4.1.9.9.166.1.7.1.1.3[.1057] = INTEGER: matchAny(3)
 </code></pre><p>As we have an indirect tag, we will create an index with &ldquo;(snmp Table) Indexed with indirect TAG&rdquo;</p>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/multiindex_indexed_it.jpg" alt="mi-indexed_it" title="(snmp Table) Indexed with indirect TAG"></p>
+<p><img src="/webUI/Examples/QoS/multiindex_indexed_it.jpg" alt="mi-indexed_it" title="(snmp Table) Indexed with indirect TAG"></p>
 <p>We fill with the index with following field/values:</p>
 <table>
 <thead>
@@ -1053,7 +1056,7 @@ A simple walk over <code>cbQosCMInfo</code>:</p>
 </p>
 <p><strong>(*) Dependency</strong></p>
 <p>In this case, as the matching index is the full index and it will just heridate the IDX{3} tags</p>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqoscminfo_meas.jpg" alt="cbqoscminfo_meas" title="example of definition of cbQosCMInfo"></p>
+<p><img src="/webUI/Examples/QoS/cbqoscminfo_meas.jpg" alt="cbqoscminfo_meas" title="example of definition of cbQosCMInfo"></p>
 <p>At this point, the IDX{4}, will be, with heridated tags from IDX{3}:</p>
 <pre><code>&gt; Index: IDX{3}
 
@@ -1238,7 +1241,7 @@ Create a <code>+ New</code> Measurement Group and fill it with:</p>
 <li>Find your device and check  if its actived and connected. If not, check your connection data!</li>
 <li>Click  on the eye icon and see what are you collecting!!!</li>
 </ul>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/runtime_qoscm.jpg" alt="runtime_qoscm" title="Example of QoS CMStats"></p>
+<p><img src="/webUI/Examples/QoS/runtime_qoscm.jpg" alt="runtime_qoscm" title="Example of QoS CMStats"></p>
 <h1 id="2-tsstats">2. TSStats</h1>
 <p>The first set of data that we want to retrieve are the TSStats</p>
 <h2 id="21-configuring-metrics">2.1 Configuring metrics</h2>
@@ -1339,7 +1342,7 @@ In our example we will configure the following metrics:</p>
 1.3.6.1.4.1.9.9.166.1.5.1.1.4[.1099][.1103] = Gauge32: 1101 # ts
 ...
 </code></pre><p>So, as we have done on CMStats, we need to make a multiple indrection in order to retrieve the classmap name, so, we will create an as <strong>&quot;(snmp Table) Indexed with multiple indirect TAG&quot;</strong></p>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/multiindex_indexed_mit.jpg" alt="mi-indexed_mit" title="(snmp Table) Indexed with multiple indirect TAG"></p>
+<p><img src="/webUI/Examples/QoS/multiindex_indexed_mit.jpg" alt="mi-indexed_mit" title="(snmp Table) Indexed with multiple indirect TAG"></p>
 <p>We fill the index with the following field/values:</p>
 <table>
 <thead>
@@ -1390,7 +1393,7 @@ In our example we will configure the following metrics:</p>
 <p align="center">
    :information_source: Index 2 - cbQosCMName
 </p>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqoscmname_ts_meas.jpg" alt="cbqoscmname_ts_meas" title="Example of CMName from TSStats"></p>
+<p><img src="/webUI/Examples/QoS/cbqoscmname_ts_meas.jpg" alt="cbqoscmname_ts_meas" title="Example of CMName from TSStats"></p>
 <p><strong>(*) Multi Tag OID</strong></p>
 <p>We will define 2 TagOID:</p>
 <p><em><strong>TagOID 0</strong></em>:</p>
@@ -1439,7 +1442,7 @@ In our example we will configure the following metrics:</p>
 </tr>
 </tbody>
 </table>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqoscmname_meas_index.jpg" alt="cbqoscmname_meas_index" title="example of definition of cbqosCMName multi TagOID"></p>
+<p><img src="/webUI/Examples/QoS/cbqoscmname_meas_index.jpg" alt="cbqoscmname_meas_index" title="example of definition of cbqosCMName multi TagOID"></p>
 <p><strong>(**) Dependency</strong></p>
 <p>In this case, we will retrieve the  to retrieve only the <code>Service Policy Index</code> from IDX{1}</p>
 <p>The logic is:</p>
@@ -1511,7 +1514,7 @@ In our example we will configure the following metrics:</p>
 ...
 </code></pre><p>To do that, we will repeat the step on the Index 2, but in this case we will add a new Tag OID to go over PolicyMap objects instead of ClassMap objects</p>
 <p>we will create an as <strong>&quot;(snmp Table) Indexed with multiple indirect TAG&quot;</strong></p>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/multiindex_indexed_mit.jpg" alt="mi-indexed_mit" title="(snmp Table) Indexed with multiple indirect TAG"></p>
+<p><img src="/webUI/Examples/QoS/multiindex_indexed_mit.jpg" alt="mi-indexed_mit" title="(snmp Table) Indexed with multiple indirect TAG"></p>
 <p>We fill the index with the following field/values:</p>
 <table>
 <thead>
@@ -1562,7 +1565,7 @@ In our example we will configure the following metrics:</p>
 <p align="center">
    :information_source: Index 3 - cbQosPolicyMapName
 </p>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqospolicyname_ts_meas.jpg" alt="cbqospolicyname_ts_meas" title="Example of PolicyMapName from TSStats"></p>
+<p><img src="/webUI/Examples/QoS/cbqospolicyname_ts_meas.jpg" alt="cbqospolicyname_ts_meas" title="Example of PolicyMapName from TSStats"></p>
 <p><strong>(*) Multi Tag OID</strong></p>
 <p>We will define 2 TagOID:</p>
 <p><em><strong>TagOID 0</strong></em>:</p>
@@ -1635,7 +1638,7 @@ In our example we will configure the following metrics:</p>
 </tr>
 </tbody>
 </table>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/cbqoscmname_meas_index_ts.jpg" alt="cbqoscmname_meas_index_ts" title="example of definition of cbqosPolicyMap multi TagOID"></p>
+<p><img src="/webUI/Examples/QoS/cbqoscmname_meas_index_ts.jpg" alt="cbqoscmname_meas_index_ts" title="example of definition of cbqosPolicyMap multi TagOID"></p>
 <p><strong>(**) Dependency</strong></p>
 <p>In this case, we need to retrieve both indexes from the IDX{2}, the complete CMIndex <code>Service Policy Index</code>.<code>Object Index</code></p>
 <p>The logic is:</p>
@@ -1874,7 +1877,7 @@ Create a <code>+ New</code> Measurement Group and fill it with:</p>
 <li>Find your device and check  if its actived and connected. If not, check your connection data!</li>
 <li>Click  on the eye icon and see what are you collecting!!!</li>
 </ul>
-<p><img src="https://github.com/toni-moreno/snmpcollector/blob/gh-pages/images/webUI/Examples/QoS/runtime_qosts.jpg" alt="runtime_qosts" title="Example of QoS TSStats"></p>
+<p><img src="/webUI/Examples/QoS/runtime_qosts.jpg" alt="runtime_qosts" title="Example of QoS TSStats"></p>
 
 </div>
 
@@ -1890,7 +1893,7 @@ Create a <code>+ New</code> Measurement Group and fill it with:</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-f36a5fdcc98c0bf39b8b1adf455af28d">2 - Configuring Cisco Catalyst with basic metrics</h1>
+	<h1 id="pg-74d9fb7b89bcdfe68abd7a653ae0e6c6">2 - Configuring Cisco Catalyst with basic metrics</h1>
     
 	<h1 id="example-configuring-cisco-catalyst-with-basic-metrics">Example: Configuring Cisco Catalyst with basic metrics</h1>
 <p>This example will show up how to configure a Cisco Catalyst on snmpcollector</p>

@@ -19,17 +19,17 @@
 <link rel="icon" type="image/png" href="/snmpcollector.org/favicons/android-192x192.png" sizes="192x192">
 
 <title>Reference | SnmpCollector</title><meta property="og:title" content="Reference" />
-<meta property="og:description" content="Low level reference docs for your project.
+<meta property="og:description" content="External resource and community contributions
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://toni-moreno.github.io/snmpcollector.org/docs/reference/" />
 <meta property="og:site_name" content="SnmpCollector" />
 <meta itemprop="name" content="Reference">
-<meta itemprop="description" content="Low level reference docs for your project.
+<meta itemprop="description" content="External resource and community contributions
 ">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Reference"/>
-<meta name="twitter:description" content="Low level reference docs for your project.
+<meta name="twitter:description" content="External resource and community contributions
 "/>
 
 
@@ -136,7 +136,7 @@ This the multi-page printable view of this section.
 
 
 <h1 class="title">Reference</h1>
-<div class="lead">Low level reference docs for your project.</div>
+<div class="lead">External resource and community contributions</div>
 
 
 
@@ -152,7 +152,15 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-b4844bf7ad55d40af2d1321689461651">Public Device Dashboard templates</a></li>
+<li>1: <a href="#pg-ae2ae5355a1bc86b224736af72e01d5b">Public Device Dashboard templates</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-5d19efcae9b808760d6c45e5cd669347">SnmpCollector Automations</a></li>
 
 
     
@@ -163,15 +171,6 @@ This the multi-page printable view of this section.
 
 <div class="content">
       
-
-<div class="pageinfo pageinfo-primary">
-<p>This is a placeholder page that shows you how to use this template site.</p>
-
-</div>
-
-<p>If your project has an API, configuration, or other reference - anything that users need to look up that’s at an even lower level than a single task - put (or link to it) here. You can serve and link to generated reference docs created using Doxygen,
-Javadoc, or other doc generation tools by putting them in your <code>static/</code> directory. Find out more in <a href="https://docsy.dev/docs/adding-content/content/#adding-static-content">Adding static content</a>. For OpenAPI reference, Docsy also provides a <a href="https://www.docsy.dev/docs/adding-content/shortcodes/#swaggerui">Swagger UI layout and shortcode</a> that renders <a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a> using any OpenAPI YAML or JSON file as source.</p>
-
 </div>
 </div>
 
@@ -190,9 +189,9 @@ Javadoc, or other doc generation tools by putting them in your <code>static/</co
 	
     
 
-<div class="td-content" style="page-break-before: always">
+<div class="td-content" style="">
     
-	<h1 id="pg-b4844bf7ad55d40af2d1321689461651">1 - Public Device Dashboard templates</h1>
+	<h1 id="pg-ae2ae5355a1bc86b224736af72e01d5b">1 - Public Device Dashboard templates</h1>
     
 	<p>From this page you will be able to download a definition and a dashboard from some popular devices/products.</p>
 <h2 id="import-instructions">Import Instructions</h2>
@@ -226,6 +225,159 @@ Javadoc, or other doc generation tools by putting them in your <code>static/</co
 </tbody>
 </table>
 
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-5d19efcae9b808760d6c45e5cd669347">2 - SnmpCollector Automations</h1>
+    
+	<p>SnmpCollector lets you do via API everything you can do with the WebUI, in this way you can automate any of your configuration, actions.</p>
+<p>You can do it yourself or use any of these other tools.</p>
+<ul>
+<li><a href="https://github.com/ixaustralia/ixaustralia-snmpcollector:">https://github.com/ixaustralia/ixaustralia-snmpcollector:</a> thanks to <a href="https://github.com/tardoe">Tim Raphael</a></li>
+<li><a href="https://github.com/topranks/mib2SnmpCol">https://github.com/topranks/mib2SnmpCol</a> : thanks to <a href="https://github.com/topranks">Cathal Mooney</a></li>
+<li><a href="https://pypi.org/project/pysnmpcollector/">https://pypi.org/project/pysnmpcollector/</a> : a python client lib for SnmpCollector  , thanks to Steffen Schumacher</li>
+</ul>
+<p>Here some examples using REST API on how to.</p>
+<ul>
+<li>Do login. ( get session cookie and store on cookies.txt file).</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -v -X POST -F <span style="color:#4e9a06">&#34;username=USER&#34;</span> -F <span style="color:#4e9a06">&#34;password=PASS&#34;</span> -c  cookies.txt http://mysnmpcollector.myorg.org:8090/login
+</code></pre></div><ul>
+<li>Get all devices status info.</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -v -X GET -b cookies.txt http://mysnmpcollector.myorg.org:8090/api/rt/device/info
+</code></pre></div><ul>
+<li>Get the status for an specific device (needs its deviceid)</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl  -X GET -b cookies.txt http://mysnmpcollector.myorg.org:8090/api/rt/device/info/&lt;DEVICE_ID&gt;
+</code></pre></div><ul>
+<li>Do a SNMP connection TEST with  PING  API</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<span style="color:#000">DEVICE_FILE</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">$(</span>mktemp<span style="color:#204a87;font-weight:bold">)</span>
+cat <span style="color:#4e9a06">&lt;&lt; EOF &gt; $DEVICE_FILE
+</span><span style="color:#4e9a06">{
+</span><span style="color:#4e9a06">  &#34;ID&#34;: &#34;SOME_DEVICE&#34;,
+</span><span style="color:#4e9a06">  &#34;Host&#34;: &#34;192.168.24.24&#34;,
+</span><span style="color:#4e9a06">  &#34;Port&#34;: 161,
+</span><span style="color:#4e9a06">  &#34;SystemOIDs&#34;: null,
+</span><span style="color:#4e9a06">  &#34;Retries&#34;: 5,
+</span><span style="color:#4e9a06">  &#34;Timeout&#34;: 20,
+</span><span style="color:#4e9a06">  &#34;Repeat&#34;: 0,
+</span><span style="color:#4e9a06">  &#34;Active&#34;: true,
+</span><span style="color:#4e9a06">  &#34;SnmpVersion&#34;: &#34;2c&#34;,
+</span><span style="color:#4e9a06">  &#34;Community&#34;: &#34;public&#34;,
+</span><span style="color:#4e9a06">  &#34;V3SecLevel&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3AuthUser&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3AuthPass&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3AuthProt&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3PrivPass&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3PrivProt&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3ContextEngineID&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3ContextName&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;DisableBulk&#34;: false,
+</span><span style="color:#4e9a06">  &#34;MaxRepetitions&#34;: 50,
+</span><span style="color:#4e9a06">  &#34;Freq&#34;: 60,
+</span><span style="color:#4e9a06">  &#34;UpdateFltFreq&#34;: 60,
+</span><span style="color:#4e9a06">  &#34;ConcurrentGather&#34;: true,
+</span><span style="color:#4e9a06">  &#34;OutDB&#34;: &#34;my_DB&#34;,
+</span><span style="color:#4e9a06">  &#34;LogLevel&#34;: &#34;info&#34;,
+</span><span style="color:#4e9a06">  &#34;LogFile&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;SnmpDebug&#34;: false,
+</span><span style="color:#4e9a06">  &#34;DeviceTagName&#34;: &#34;device&#34;,
+</span><span style="color:#4e9a06">  &#34;DeviceTagValue&#34;: &#34;id&#34;,
+</span><span style="color:#4e9a06">  &#34;ExtraTags&#34;: [
+</span><span style="color:#4e9a06">    &#34;tag1=someinfo&#34;,
+</span><span style="color:#4e9a06">    &#34;tag2=someinfo2&#34;
+</span><span style="color:#4e9a06">  ],
+</span><span style="color:#4e9a06">  &#34;DeviceVars&#34;: [
+</span><span style="color:#4e9a06">    &#34;&#34;
+</span><span style="color:#4e9a06">  ],
+</span><span style="color:#4e9a06">  &#34;Description&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;MeasurementGroups&#34;: [
+</span><span style="color:#4e9a06">    &#34;MyMeasurmentGroup&#34;
+</span><span style="color:#4e9a06">  ],
+</span><span style="color:#4e9a06">  &#34;MeasFilters&#34;: [
+</span><span style="color:#4e9a06">     &#34;MyMeasurement1_filter&#34;,
+</span><span style="color:#4e9a06">     &#34;MyMeasurement2_filter&#34;
+</span><span style="color:#4e9a06">  ]
+</span><span style="color:#4e9a06">}
+</span><span style="color:#4e9a06">EOF</span>
+
+curl  -X POST -b cookies.txt -d @<span style="color:#000">$DEVICE_FILE</span> http://mysnmpcollector.myorg.org:8090/api/rt/agent/snmpconsole/ping/ --header <span style="color:#4e9a06">&#34;Content-Type: application/json&#34;</span>
+</code></pre></div><ul>
+<li>Add a new device ( supose you have already configured the MeasurementGroups/Filters and InfluxServers)</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<span style="color:#000">DEVICE_FILE</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">$(</span>mktemp<span style="color:#204a87;font-weight:bold">)</span>
+cat <span style="color:#4e9a06">&lt;&lt; EOF &gt; $DEVICE_FILE
+</span><span style="color:#4e9a06">{
+</span><span style="color:#4e9a06">  &#34;ID&#34;: &#34;SOME_DEVICE&#34;,
+</span><span style="color:#4e9a06">  &#34;Host&#34;: &#34;192.168.24.24&#34;,
+</span><span style="color:#4e9a06">  &#34;Port&#34;: 161,
+</span><span style="color:#4e9a06">  &#34;SystemOIDs&#34;: null,
+</span><span style="color:#4e9a06">  &#34;Retries&#34;: 5,
+</span><span style="color:#4e9a06">  &#34;Timeout&#34;: 20,
+</span><span style="color:#4e9a06">  &#34;Repeat&#34;: 0,
+</span><span style="color:#4e9a06">  &#34;Active&#34;: true,
+</span><span style="color:#4e9a06">  &#34;SnmpVersion&#34;: &#34;2c&#34;,
+</span><span style="color:#4e9a06">  &#34;Community&#34;: &#34;public&#34;,
+</span><span style="color:#4e9a06">  &#34;V3SecLevel&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3AuthUser&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3AuthPass&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3AuthProt&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3PrivPass&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3PrivProt&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3ContextEngineID&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;V3ContextName&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;DisableBulk&#34;: false,
+</span><span style="color:#4e9a06">  &#34;MaxRepetitions&#34;: 50,
+</span><span style="color:#4e9a06">  &#34;Freq&#34;: 60,
+</span><span style="color:#4e9a06">  &#34;UpdateFltFreq&#34;: 60,
+</span><span style="color:#4e9a06">  &#34;ConcurrentGather&#34;: true,
+</span><span style="color:#4e9a06">  &#34;OutDB&#34;: &#34;my_DB&#34;,
+</span><span style="color:#4e9a06">  &#34;LogLevel&#34;: &#34;info&#34;,
+</span><span style="color:#4e9a06">  &#34;LogFile&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;SnmpDebug&#34;: false,
+</span><span style="color:#4e9a06">  &#34;DeviceTagName&#34;: &#34;device&#34;,
+</span><span style="color:#4e9a06">  &#34;DeviceTagValue&#34;: &#34;id&#34;,
+</span><span style="color:#4e9a06">  &#34;ExtraTags&#34;: [
+</span><span style="color:#4e9a06">    &#34;tag1=someinfo&#34;,
+</span><span style="color:#4e9a06">    &#34;tag2=someinfo2&#34;
+</span><span style="color:#4e9a06">  ],
+</span><span style="color:#4e9a06">  &#34;DeviceVars&#34;: [
+</span><span style="color:#4e9a06">    &#34;&#34;
+</span><span style="color:#4e9a06">  ],
+</span><span style="color:#4e9a06">  &#34;Description&#34;: &#34;&#34;,
+</span><span style="color:#4e9a06">  &#34;MeasurementGroups&#34;: [
+</span><span style="color:#4e9a06">    &#34;MyMeasurmentGroup&#34;
+</span><span style="color:#4e9a06">  ],
+</span><span style="color:#4e9a06">  &#34;MeasFilters&#34;: [
+</span><span style="color:#4e9a06">     &#34;MyMeasurement1_filter&#34;,
+</span><span style="color:#4e9a06">     &#34;MyMeasurement2_filter&#34;
+</span><span style="color:#4e9a06">  ]
+</span><span style="color:#4e9a06">}
+</span><span style="color:#4e9a06">EOF</span>
+
+curl  -X POST -b cookies.txt -d @<span style="color:#000">$DEVICE_FILE</span> http://mysnmpcollector.myorg.org:8090/api/cfg/snmpdevice/ --header <span style="color:#4e9a06">&#34;Content-Type: application/json&#34;</span>
+
+</code></pre></div><ul>
+<li>Generic Import ( Any data )</li>
+</ul>
+<p>You can also use curl as a way to import,  previouly exported data in json format with the export web-ui tool.</p>
+<pre><code>curl -X POST-b cookies.txt  -F &quot;auto_rename=false&quot; -F &quot;over_write=true&quot; -F &quot;export_file=@/path/where/the/file/is/exported_file.json&quot; http://mysnmpcollector.myorg.org:8090/api/cfg/import
+</code></pre>
 </div>
 
 
