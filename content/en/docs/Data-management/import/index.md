@@ -2,7 +2,7 @@
 title: "Import"
 description: "Create a filter directly from OID queries on related SNMP Device and related Measurement."
 lead: "Create a filter directly from OID queries on related SNMP Device and related Measurement."
-linkTitle: "Export"
+linkTitle: "Import"
 draft: false
 menu:
   docs:
